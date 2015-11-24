@@ -1,18 +1,17 @@
 <div>
-	<h3>Say hello to nemo~</h3>
-	<img src={{url}}></img>
-</div>
+  <div class='row'>
+    <div class='col-md-4 project-div' ng-repeat='curr in project'>
+      <div>
+        <a href="{{curr['Project Link']}}">
+          <img class="img-responsive img-thumbnail" ng-src="{{curr['Project Image']}}" alt="{{curr['Project Image']}}"></img>
+        </a>
+      </div>
 
-<!-- <div ng-controller="CarouselCtrl">
-  <div style="height: 305px">
-    <uib-carousel interval="myInterval" no-wrap="noWrapSlides">
-      <uib-slide ng-repeat="slide in slides" active="slide.active">
-        <img ng-src="{{slide.image}}" style="margin:auto;">
-        <div class="carousel-caption">
-          <h4>Slide {{$index}}</h4>
-          <p>{{slide.text}}</p>
-        </div>
-      </uib-slide>
-    </uib-carousel>
+      <div class='project-text'>
+        <h4>{{curr['Project Name']}}</h4>
+        <p>{{curr['Project Description']}}</p>
+      </div>
+    </div>
+
   </div>
-</div> -->
+</div>

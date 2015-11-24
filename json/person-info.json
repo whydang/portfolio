@@ -2,11 +2,13 @@
 	{
 		"Last Name":"Dang",
 		"First Name":"Ying",
+		"Description": "Junior | Informatics | University of Washington",
 		"Picture": "http://students.washington.edu/fge3/profile_pic.jpg",
 		"Email":"whydang@uw.edu",
 		"Phone":"206-403-6028",
 		"Github":"https://github.com/whydang",
 		"LinkedIn":"https://www.linkedin.com/in/whydang",
-		"Resume":"https://drive.google.com/file/d/0B-SSXmwu-7I7OXJiSVBDdzdpQUE/view?usp=sharing"
+		"Resume":"http://students.washington.edu/whydang/etc/yd_resume.pdf"
+
 	}
 ]

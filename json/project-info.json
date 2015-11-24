@@ -1,18 +1,22 @@
 [
 	{
 		"Project Name" : "Police Shooting Map",
+		"Testing" : "hi",
+		"Project Image" : "https://i.ytimg.com/vi/CkZCq2utBMM/maxresdefault.jpg",
 		"Project Link" : "http://students.washington.edu/whydang/info343/police-shooting/",
 		"Project Description" : "Utilized Ajax request in order to retrieve data about police shootings in the US, visualize these data into a map, and filter through the data to be displayed."
 	},
 	
 	{
 		"Project Name" : "Course Review",
+		"Project Image" : "http://wileyisupdates.ca/wp-content/uploads/2015/04/reviews.jpg",
 		"Project Link" : "http://students.washington.edu/whydang/info343/crud-app/crud-app/",
 		"Project Description" : "Integrated the CRUD principles using Parse into a course review application that allows students to rate the class, leave constructive feedback, and delete any reviews they wish."
 	},
 	
 	{
 		"Project Name" : "Spotify Music Demo",
+		"Project Image" : "http://static1.squarespace.com/static/532dfcd5e4b0e21c6654ba51/53ea6116e4b03177915ccff9/55365ef0e4b02c526ec9a038/1429626609053/spotify-logo-mat-pras-660x4401.jpeg",
 		"Project Link" : "http://students.washington.edu/whydang/info343/spotify-template/",
 		"Project Description" : "Extracted data from the Spotify API in order to create a music player of the sample songs within Spotify, as well as applied an audio visualization to improve the user experience."
 	}

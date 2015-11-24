@@ -25,40 +25,36 @@
   <body>
     <div class="container">
       <header>
-          <div class='row'>
+        <div class='row'>
 
-            <div class='col-md-6'>
-              <img id='profile_pic' src="{{person['Picture']}}" alt='person profile picture'></img>
-            </div>
-
-            <div class='col-md-6'>
-              <h1>{{person['First Name']}} {{person['Last Name']}}</h1>
-              <div>
-                <a href="mailto:{{person['Email']}}"><i class="fa fa-envelope"></i></a>
-                <a href="tel:{{person['Phone']}}"><i class="fa fa-mobile"></i></a>
-                <a href="{{person['Github']}}"><i class="fa fa-github-square"></i></a>
-                <a href="{{person['LinkedIn']}}"><i class="fa fa-linkedin-square"></i></a>
-              </div>
-            </div>
+          <div class='col-md-6'>
+            <img id='profile_pic' src="{{person['Picture']}}" alt='person profile picture'></img>
           </div>
+          <div class='contact-info'>
+              <h1>{{person['First Name']}} {{person['Last Name']}}</h1>
+              <p>{{person['Description']}}</p>
+              <a href="mailto:{{person['Email']}}"><i class="fa fa-envelope"></i></a>
+              <a href="tel:{{person['Phone']}}"><i class="fa fa-mobile"></i></a>
+              <a href="{{person['Github']}}"><i class="fa fa-github-square"></i></a>
+              <a href="{{person['LinkedIn']}}"><i class="fa fa-linkedin-square"></i></a>
 
-          <ul class="nav nav-tabs nav-justified">
-            <li class='active'><a data-toggle="tab" ui-sref='home'>Home</a></li>
-            <li><a data-toggle="tab" ui-sref= 'about'>About</a></li>
-            <li><a data-toggle="tab" ui-sref= 'resume'>Resume</a></li>
-            <li><a data-toggle="tab" ui-sref='projects'>Projects</a></li>
-          </ul>
+          </div>
+        </div>
+
+        <ul class="nav nav-tabs nav-justified">
+          <li class='active'><a data-toggle="tab" ui-sref='home'>Home</a></li>
+          <li><a data-toggle="tab" ui-sref= 'about'>About</a></li>
+          <li><a data-toggle="tab" ui-sref='projects'>Projects</a></li>
+          <li><a data-toggle="tab" ui-sref= 'resume'>Resume</a></li>
+        </ul>
 
   		</header>
-        
 
-      <div class="container">
+      <!--changes to any page is interactive through ui-view-->
+      <div>
         <div ui-view></div>
       </div>
-
-      <footer>
-          <h2>almighty footer</h2>
-      </footer>
+      
     </div>
   </body>
 </html>
