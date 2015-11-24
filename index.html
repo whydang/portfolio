@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html ng-app="myApp" ng-controller='myCtrl'>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +9,7 @@
     <!-- Libraries -->
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
@@ -17,18 +18,37 @@
     <script src="js/app.js"></script>
     <link href = "css/app.css" rel="stylesheet" type = "text/css"/>
     
+    <link rel="shortcut icon" href="img/favicon.ico">
   </head>
+
+
   <body>
-    <div>
+    <div class="container">
       <header>
+          <div class='row'>
 
-          <h1>Ying Dang</h1>
-          <h2>email: </h2>
-          <h2>phone: </h2>
+            <div class='col-md-6'>
+              <img id='profile_pic' src="{{person['Picture']}}" alt='person profile picture'></img>
+            </div>
 
-          <a ui-sref='home' class="btn btn-default">Home</a>
-          <a ui-sref='content' class="btn btn-default">Content</a>
-          <a ui-sref= 'about' class="btn btn-default">About</a>
+            <div class='col-md-6'>
+              <h1>{{person['First Name']}} {{person['Last Name']}}</h1>
+              <div>
+                <a href="mailto:{{person['Email']}}"><i class="fa fa-envelope"></i></a>
+                <a href="tel:{{person['Phone']}}"><i class="fa fa-mobile"></i></a>
+                <a href="{{person['Github']}}"><i class="fa fa-github-square"></i></a>
+                <a href="{{person['LinkedIn']}}"><i class="fa fa-linkedin-square"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <ul class="nav nav-tabs nav-justified">
+            <li class='active'><a data-toggle="tab" ui-sref='home'>Home</a></li>
+            <li><a data-toggle="tab" ui-sref= 'about'>About</a></li>
+            <li><a data-toggle="tab" ui-sref= 'resume'>Resume</a></li>
+            <li><a data-toggle="tab" ui-sref='projects'>Projects</a></li>
+          </ul>
+
   		</header>
         
 
