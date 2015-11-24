@@ -14,15 +14,6 @@ var myCtrl = myApp.controller('myCtrl', function($scope, $http) {
 
 })
 
-// Content controller: define $scope.url as an image
-.controller('ProjectsController', function($scope, $http) {
-	$http.get(project_url).success(function(project) {
-		$scope.project = project;
-	})
-})
-
-
-
 
 
 // Configure app
@@ -54,6 +45,14 @@ myApp.config(function ($stateProvider) {
 
 })
 
+
+// Content controller: define $scope.url as an image
+.controller('ProjectsController', function($scope, $http) {
+	$http.get(project_url).success(function(project) {
+		$scope.project = project;
+	})
+})
+
 // Landing page controller: define $scope.number as a number
 .controller('HomeController', function ($scope) {
 
@@ -69,3 +68,4 @@ myApp.config(function ($stateProvider) {
 .controller('ResumeController', function ($scope) {
 
 })
+
