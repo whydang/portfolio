@@ -1,6 +1,7 @@
 
 
 var person_url = '../json/person-info.json';
+var about_url = '../json/about.json';
 var project_url = '../json/project-info.json';
 
 // Create app
@@ -9,7 +10,6 @@ var myApp = angular.module('myApp', ['ui.router']);
 var myCtrl = myApp.controller('myCtrl', function($scope, $http) {
 	$http.get(person_url).success(function(info) {
 		$scope.person = info[0];
-		console.log($scope.person);
 	})
 
 })
@@ -17,7 +17,6 @@ var myCtrl = myApp.controller('myCtrl', function($scope, $http) {
 // Content controller: define $scope.url as an image
 .controller('ProjectsController', function($scope, $http) {
 	$http.get(project_url).success(function(project) {
-		console.log(project);
 		$scope.project = project;
 	})
 })
@@ -61,8 +60,10 @@ myApp.config(function ($stateProvider) {
 })
 
 // About page controller: define $scope.about as a string
-.controller('AboutController', function ($scope) {
-
+.controller('AboutController', function ($scope, $http) {
+	$http.get(about_url).success(function(about) {
+		$scope.aboutme = about;
+	})
 })
 
 .controller('ResumeController', function ($scope) {

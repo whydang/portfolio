@@ -10,7 +10,7 @@ a {
 	color: #A16D5C;
 }
 
-.project-div {
+.project-div, .misc-div {
 	padding-top: 2em;
 	padding-bottom: 2em;
 }
